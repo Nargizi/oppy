@@ -1,18 +1,19 @@
-[build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta
-
-[project]
+[tool.poetry]
 name = "oppy"
-version = "0.0.1"
-authors = [
-  { name="Giorgi Gogelashvili", email="ggoge19@freeuni.edu.ge" },
-]
-description = "A small package for processing pdf files with ocr"
+version = "0.1.0"
+description = "A simple package for ocring pdf files"
+authors = ["Nargizi <ggoge19@freeuni.edu.ge>"]
 readme = "README.md"
-requires-python = ">=3.10"
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+PyMuPDF = "^1.23.26"
+opencv-python = "^4.9.0"
+pytesseract = "^0.3.10"
+fsspec = "^2024.2.0"
+ruff = "^0.3.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
